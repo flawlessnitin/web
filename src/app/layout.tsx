@@ -14,14 +14,22 @@ const lexendDeca = Lexend_Deca({
   variable: "--font-lexend-deca",
   subsets: ["latin"],
   display: "swap",
+  preload: true,
+  fallback: ['system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
 });
 
 export const metadata: Metadata = {
   title: "Best AI-Powered Online Learning Platform | Shiksha Nation",
   description:
     "Best AI-based Online courses for classes 6–12, JEE, NEET & CUET. Learn with expert teachers anytime, anywhere to improve academic performance.",
+  keywords: "online learning, AI education, JEE preparation, NEET coaching, class 6-12 courses, expert teachers",
+  authors: [{ name: "Shiksha Nation" }],
+  creator: "Shiksha Nation",
+  publisher: "Shiksha Nation",
   icons: {
     icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
   },
   viewport: {
     width: "device-width",
@@ -36,6 +44,41 @@ export const metadata: Metadata = {
     capable: true,
     statusBarStyle: "default",
     title: "Shikshanation",
+  },
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: "https://shikshanation.com/",
+    title: "Best AI-Powered Online Learning Platform | Shiksha Nation",
+    description: "Best AI-based Online courses for classes 6–12, JEE, NEET & CUET. Learn with expert teachers anytime, anywhere.",
+    siteName: "Shiksha Nation",
+    images: [
+      {
+        url: "/home/ShikshaBase.png",
+        width: 1200,
+        height: 630,
+        alt: "Shiksha Nation - AI-Powered Learning Platform",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    site: "@shikshanation",
+    creator: "@shikshanation",
+    title: "Best AI-Powered Online Learning Platform | Shiksha Nation",
+    description: "Best AI-based Online courses for classes 6–12, JEE, NEET & CUET.",
+    images: ["/home/ShikshaBase.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
@@ -76,6 +119,13 @@ export default function RootLayout({
         <meta name="apple-mobile-web-app-title" content="Shikshanation" />
         <link rel="apple-touch-icon" href="/favicon.ico" />
 
+        {/* Resource Hints for Performance */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preload" href="/home/ShikshaBase.png" as="image" type="image/png" />
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://embed.tawk.to" />
+
         {/* JSON-LD Structured Data */}
         <Script
           id="json-ld"
@@ -90,7 +140,7 @@ export default function RootLayout({
         {/* Google Tag Manager */}
         <Script
           id="gtm"
-          strategy="afterInteractive"
+          strategy="lazyOnload"
           dangerouslySetInnerHTML={{
             __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
 new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],

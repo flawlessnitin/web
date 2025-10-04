@@ -1,5 +1,10 @@
 import { CoursesSection, FaqSection, FeaturesSection, Hero, JoinLearnersSection, TopCategoriesSection, QrAppPromo, StatsSection, TestimonialsSection, WhatYouGetSection } from "@/components/HomePageSections";
-import PopupBanner from "@/components/PopupBanner";
+import dynamic from "next/dynamic";
+
+// Lazy load non-critical components
+const PopupBanner = dynamic(() => import("@/components/PopupBanner"), {
+  loading: () => null
+});
 
 export default function Home() {
   return (
