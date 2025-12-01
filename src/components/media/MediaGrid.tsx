@@ -2,6 +2,14 @@
 import React, { useState, useMemo, useRef } from "react";
 
 const mediaPosts = [
+  {
+    logo: "https://indianexpress.com/wp-content/themes/indianexpress/images/indian-express-logo-n.svg",
+    brand: "THE INDIAN EXPRESS",
+    title: "JEE Main 2026: Guide to attempt mock test for engineering entrance test?",
+    desc: "One of the most critical aspects of JEE Main preparation - and something that mock tests help immensely with - is time management.",
+    date: "30 November, 2025",
+    link: "https://indianexpress.com/article/education/jee-main-2026-how-to-attempt-mock-test-jee-advanced-2026-preparation-10392468/",
+  },
    {
     logo: "https://indianexpress.com/wp-content/themes/indianexpress/images/indian-express-logo-n.svg",
     brand: "THE INDIAN EXPRESS",
