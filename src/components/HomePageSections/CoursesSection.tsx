@@ -6,14 +6,14 @@ import { coursesData, getPopularCourses, getHomepageTopCourses } from "@/data/co
 import { FiArrowRight, FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { useIntersectionObserver } from "@/hooks";
 
-const categoryOptions = [
-  { label: "All Categories", value: "all" },
-  { label: "Class 6th to 12th", value: "class6-12" },
-  { label: "JEE", value: "jee" },
-  { label: "NEET", value: "neet" },
-  { label: "CUET", value: "cuet" },
-  { label: "Skill Development", value: "skilling" },
-];
+// const categoryOptions = [
+//   { label: "All Categories", value: "all" },
+//   { label: "Class 6th to 12th", value: "class6-12" },
+//   { label: "JEE", value: "jee" },
+//   { label: "NEET", value: "neet" },
+//   { label: "CUET", value: "cuet" },
+//   { label: "Skill Development", value: "skilling" },
+// ];
 
 const CoursesSection = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
@@ -319,15 +319,15 @@ const CoursesSection = () => {
         </div>
 
         {/* Category Tabs with Sliding Indicator */}
-        <div
+        {/* <div
           className="flex items-center justify-center mb-12 overflow-x-auto lg:overflow-x-visible"
           style={{ scrollbarWidth: "none", touchAction: "pan-x" }}
-        >
-          <div
+        > */}
+          {/* <div
             ref={containerRef}
             className="relative flex items-center gap-6 sm:gap-8 md:gap-12 lg:gap-16 xl:gap-20 border-b border-gray-200 justify-start lg:justify-center flex-nowrap px-2 sm:px-0 min-w-full lg:min-w-0 hide-scrollbar"
-          >
-            {categoryOptions.map((cat) => (
+          > */}
+            {/* {categoryOptions.map((cat) => (
               <button
                 key={cat.value}
                 ref={(el) => {
@@ -343,17 +343,17 @@ const CoursesSection = () => {
               >
                 {cat.label}
               </button>
-            ))}
+            ))} */}
             {/* Sliding Active Indicator */}
-            <div
+            {/* <div
               className="absolute bottom-0 h-0.5 bg-green-600 transition-all duration-500 ease-out z-0 rounded-full pointer-events-none"
               style={{
                 width: `${indicatorStyle.width}px`,
                 left: `${indicatorStyle.left}px`,
               }}
-            />
-          </div>
-        </div>
+            /> */}
+          {/* </div> */}
+        {/* </div> */}
 
         <style jsx>{`
           .hide-scrollbar::-webkit-scrollbar {

@@ -8,7 +8,7 @@ export default function Home() {
       <StatsSection />
       <FeaturesSection />
       <FeaturedMediaSection />
-      <TopCategoriesSection />
+      {/* <TopCategoriesSection /> */}
       <CoursesSection />
       <WhatYouGetSection />
       <TestimonialsSection />
